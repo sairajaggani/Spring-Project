@@ -1,0 +1,23 @@
+package com.learn.Springboot;
+
+
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
+@Component
+public class Gamemain {
+// private MarioGame game;
+  private Console game;
+
+    public Gamemain(@Qualifier("Car") Console game) {
+        this.game = game;
+    }
+    void run(){
+       game.up();
+       game.down();
+       game.right();
+       game.left();
+
+    }
+
+}
