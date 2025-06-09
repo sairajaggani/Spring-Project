@@ -2,6 +2,7 @@ package com.learn.Springboot;
 
 
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -9,9 +10,11 @@ public class Gamemain {
 // private MarioGame game;
   private Console game;
 
-    public Gamemain(@Qualifier("Car") Console game) {
+    public Gamemain(Console game) {
         this.game = game;
+
     }
+
     void run(){
        game.up();
        game.down();
