@@ -2,6 +2,8 @@ package learnJava;
 
 
 
+import jakarta.inject.Inject;
+import jakarta.inject.Named;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
@@ -10,7 +12,8 @@ import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 
-@Component
+//@Component
+@Named // Replacement for Component
 class BussinessClass{
 //using Feild injection
 //@Autowired
@@ -21,7 +24,8 @@ class BussinessClass{
 Dependency1 dependency1;
 Dependency2 dependency2;
 //using setter based injection
-	@Autowired
+	//@Autowired
+	@Inject // Replacement for AUTOWIRED in jakartha
 	public void setDependency1(Dependency1 dependency1) {
 		this.dependency1 = dependency1;
 	}
