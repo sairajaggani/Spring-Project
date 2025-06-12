@@ -15,7 +15,7 @@ public class Gamemain {
 
     }
 
-    void run(){
+    public void run(){
        game.up();
        game.down();
        game.right();
