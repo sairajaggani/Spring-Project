@@ -2,10 +2,16 @@ package learnJava1.learnJava;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Repository;
 
 import java.util.Arrays;
 
 @Component
+// @Servive   can we used insterd of component for classes defining bussiness logic
+//@Controller  can we used insterd of component for classes defining web controlletrs or APIS logic
+//@Repository can we used insterd of component for classes defining databases logic
+
 public class Bussinesslogic {
 
     //Dataservice dataservice;
